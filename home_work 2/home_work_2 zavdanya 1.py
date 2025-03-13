@@ -6,28 +6,27 @@ class Dog:
         self.name = name
         self.lonely = 0  #одинокість
         self.food = 20  #їжа
-        self.wash = 10  #чистота
+        self.wash = 20  #чистота
         self.sleep = 0  #на скільки хочеться спати
         self.alive = True
 
     def to_play(self):
         print("Час грати")
         self.lonely -= 5
-        self.wash -= 2
+        self.wash -= 1
         self.food -= 2
         self.sleep += 3
 
     def to_sleep(self):
         print("Час спати")
         self.sleep -= 10
-        self.wash -= 1
         self.food -= 2
         self.lonely += 1
 
     def to_eat(self):
         print("Час їсти")
         self.food += 10
-        self.wash -= 4
+        self.wash -= 3
 
     def to_wash(self):
         print("Час митися")
