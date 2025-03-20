@@ -147,9 +147,10 @@ class Steam:
                 pass
             else:
                 print(f"{game_name.split(': ')[1]}", "is downloading")
+                self.biblioteka.append(f"{game_name.split(': ')[1]}")
                 self.computer.comp_list[3] -= size
         print("\n")
-        self.biblioteka.append(f"{game_name.split(': ')[1]}")
+
         while True:   # цикл повторяется пока условия в нем правда
             self.smthelse = str(input("You want to install somthing else (yes/no) - ")).strip().lower()
             print("\n")
@@ -167,8 +168,9 @@ class Steam:
                     else:
                         print(game_name, "is downloading")
                         print("\n")
+                        self.biblioteka.append(f"{game_name.split(': ')[1]}")
                         self.computer.comp_list[3] -= size
-                self.biblioteka.append(f"{game_name.split(': ')[1]}")
+
             elif self.smthelse == "no":
                 print("Okay!")
                 print("\n")
